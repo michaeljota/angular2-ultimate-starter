@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+
+  <!-- Configured Head Tags  -->
+  <% if (htmlWebpackPlugin.options.headTags) { %>
+  <%= htmlWebpackPlugin.options.headTags %>
+  <% } %>
+
+  <!-- base url -->
+  <base href="<%= htmlWebpackPlugin.options.baseUrl %>">
+
+
+</head>
+
+<body>
+
+  <my-app>
+    Loading...
+  </my-app>
+
+  <% if (htmlWebpackPlugin.options.googleAnalytics && htmlWebpackPlugin.options.googleAnalytics.trackingId) { %>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create','<%= htmlWebpackPlugin.options.googleAnalytics.trackingId %>','auto');
+      <% if (htmlWebpackPlugin.options.googleAnalytics.pageViewOnLoad) { %>
+      ga('send','pageview');
+      <% } %>
+    </script>
+  <% } %>
+
+  <% if (htmlWebpackPlugin.options.isDevServer && htmlWebpackPlugin.options.HMR !== true) { %>
+  <!-- Webpack Dev Server reload -->
+  <script src="/webpack-dev-server.js"></script>
+  <% } %>
+
+
+</body>
+</html>

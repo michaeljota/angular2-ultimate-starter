@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib/",
+  "auto-close-tag.activationOnLanguage": [
+    "html"
+  ],
+  "typescriptHero.resolver.multiLineWrapThreshold": 100
+}

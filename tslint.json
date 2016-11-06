@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "./config/tslint/codelizer.tslint.json"
+  ],
+  "rules": {
+    "no-console": [true,
+      "log",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "max-line-length": [
+      true,
+      100
+    ],
+    "no-string-literal": false,
+    "no-use-before-declare": true,
+    "object-literal-sort-keys": false,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore",
+      "allow-pascal-case",
+      "ban-keywords",
+      "check-format"
+    ]
+  }
+}
