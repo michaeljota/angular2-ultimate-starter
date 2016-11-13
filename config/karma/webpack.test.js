@@ -79,7 +79,7 @@ module.exports = function(env) {
           test: /\.ts$/,
           enforce: 'pre',
           loader: 'tslint-loader',
-          exclude: [appRoot.resolve('node_modules')]
+          exclude: [appRoot.resolve('node_modules')],
         },
 
         /**
@@ -111,8 +111,8 @@ module.exports = function(env) {
           include: appRoot.resolve('src'),
           exclude: [
             /\.(e2e|spec)\.ts$/,
-            /node_modules/
-          ]
+            /node_modules/,
+          ],
         },
 
         /**
@@ -131,11 +131,11 @@ module.exports = function(env) {
 
               // Remove TypeScript helpers to be injected
               // below by DefinePlugin
-              removeComments: true
+              removeComments: true,
 
-            }
+            },
           },
-          exclude: [/\.e2e\.ts$/]
+          exclude: [/\.e2e\.ts$/],
         },
 
         /**
@@ -146,7 +146,7 @@ module.exports = function(env) {
         {
           test: /\.json$/,
           loader: 'json-loader',
-          exclude: [appRoot.resolve('src/index.html')]
+          exclude: [appRoot.resolve('src/index.html')],
         },
 
         /**
@@ -158,7 +158,7 @@ module.exports = function(env) {
         {
           test: /\.css$/,
           loaders: ['to-string-loader', 'css-loader'],
-          exclude: [appRoot.resolve('src/index.html')]
+          exclude: [appRoot.resolve('src/index.html')],
         },
 
         /**
@@ -170,9 +170,9 @@ module.exports = function(env) {
         {
           test: /\.html$/,
           loader: 'raw-loader',
-          exclude: [appRoot.resolve('src/index.html')]
+          exclude: [appRoot.resolve('src/index.html')],
         },
-      ]
+      ],
     },
 
     /**
@@ -199,7 +199,7 @@ module.exports = function(env) {
           'ENV': JSON.stringify(ENV),
           'NODE_ENV': JSON.stringify(ENV),
           'HMR': false,
-        }
+        },
       }),
 
       new LoaderOptionsPlugin({
@@ -213,7 +213,7 @@ module.exports = function(env) {
           tslint: {
             emitErrors: false,
             failOnHint: false,
-            resourcePath: 'src'
+            resourcePath: 'src',
           },
         },
       }),
@@ -233,8 +233,8 @@ module.exports = function(env) {
       crypto: 'empty',
       module: false,
       clearImmediate: false,
-      setImmediate: false
-    }
+      setImmediate: false,
+    },
 
   };
 }

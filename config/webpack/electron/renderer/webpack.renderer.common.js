@@ -20,7 +20,7 @@ const { HTML_OPTIONS } = require('./../../options');
  */
 module.exports = (env) => {
   const _env = Object.assign({}, HTML_OPTIONS, env, {
-    baseUrl: './'
+    baseUrl: './',
   });
   return {
 
@@ -82,7 +82,7 @@ module.exports = (env) => {
         'RENDERER': true,
         'process.env': {
           'RENDERER': true,
-        }
+        },
       }),
 
       /*
@@ -108,7 +108,7 @@ module.exports = (env) => {
       process: true,
       module: false,
       clearImmediate: false,
-      setImmediate: false
-    }
+      setImmediate: false,
+    },
   };
 };

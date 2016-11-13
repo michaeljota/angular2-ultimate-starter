@@ -29,9 +29,9 @@ module.exports = (dev) => {
        */
       new webpack.DefinePlugin({
         'ENV': {
-          'ENV': JSON.stringify(ENV)
-        }
-      })
-    ]
+          'ENV': JSON.stringify(ENV),
+        },
+      }),
+    ],
   });
 }

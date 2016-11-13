@@ -17,7 +17,6 @@ const {
   IgnorePlugin,
   LoaderOptionsPlugin,
   NormalModuleReplacementPlugin,
-  ProvidePlugin,
 } = require('webpack');
 const { DedupePlugin, UglifyJsPlugin } = require('webpack').optimize;
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -70,7 +69,7 @@ module.exports = function(env) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-chunkfilename
        */
-      chunkFilename: '[id].[chunkhash].chunk.js'
+      chunkFilename: '[id].[chunkhash].chunk.js',
 
     },
 
@@ -116,7 +115,7 @@ module.exports = function(env) {
           'ENV': JSON.stringify(_env.ENV),
           'NODE_ENV': JSON.stringify(_env.ENV),
           'HMR': _env.HMR,
-        }
+        },
       }),
 
       /**
@@ -146,7 +145,7 @@ module.exports = function(env) {
         beautify: false, //prod
         mangle: { screw_ie8 : true, keep_fnames: true }, //prod
         compress: { screw_ie8: true }, //prod
-        comments: false //prod
+        comments: false, //prod
       }),
 
       /**
@@ -201,7 +200,7 @@ module.exports = function(env) {
           tslint: {
             emitErrors: true,
             failOnHint: true,
-            resourcePath: 'src'
+            resourcePath: 'src',
           },
 
           /**
@@ -217,9 +216,9 @@ module.exports = function(env) {
             customAttrSurround: [
               [/#/, /(?:)/],
               [/\*/, /(?:)/],
-              [/\[?\(?/, /(?:)/]
+              [/\[?\(?/, /(?:)/],
             ],
-            customAttrAssign: [/\)?\]?=/]
+            customAttrAssign: [/\)?\]?=/],
           },
         },
       }),
@@ -238,8 +237,8 @@ module.exports = function(env) {
       process: false,
       module: false,
       clearImmediate: false,
-      setImmediate: false
-    }
+      setImmediate: false,
+    },
 
   });
 }

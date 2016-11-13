@@ -9,7 +9,7 @@ const appRoot = require('app-root-path');
  * Webpack Plugins
  */
 const AssetsPlugin = require('assets-webpack-plugin');
-const { ContextReplacementPlugin, LoaderOptionsPlugin } = require('webpack');
+const { ContextReplacementPlugin } = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { ForkCheckerPlugin } = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -48,7 +48,7 @@ module.exports = (env) => {
 
       'polyfills': './src/polyfills.browser.ts',
       'vendor':    './src/vendor.browser.ts',
-      'main':      './src/main.browser.ts'
+      'main':      './src/main.browser.ts',
 
     },
 
@@ -100,9 +100,9 @@ module.exports = (env) => {
           query: {
             search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
             replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)',
-            flags: 'g'
+            flags: 'g',
           },
-          include: [appRoot.resolve('src')]
+          include: [appRoot.resolve('src')],
         },
 
         /*
@@ -117,9 +117,9 @@ module.exports = (env) => {
           loaders: [
             '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
             'awesome-typescript-loader',
-            'angular2-template-loader'
+            'angular2-template-loader',
           ],
-          exclude: [/\.(spec|e2e)\.ts$/]
+          exclude: [/\.(spec|e2e)\.ts$/],
         },
 
         /*
@@ -129,7 +129,7 @@ module.exports = (env) => {
          */
         {
           test: /\.json$/,
-          loader: 'json-loader'
+          loader: 'json-loader',
         },
 
         /*
@@ -139,13 +139,13 @@ module.exports = (env) => {
          */
         {
           test: /\.css$/,
-          loaders: ['to-string-loader', 'css-loader']
+          loaders: ['to-string-loader', 'css-loader'],
           // loaders: ['raw-loader']
         },
 
         {
           test: /\.scss$/,
-          loaders: ['to-string-loader', 'sass-loader']
+          loaders: ['to-string-loader', 'sass-loader'],
         },
 
         /* Raw loader support for *.html
@@ -156,14 +156,14 @@ module.exports = (env) => {
         {
           test: /\.html$/,
           loader: 'raw-loader',
-          exclude: [appRoot.resolve('src/index.html')]
+          exclude: [appRoot.resolve('src/index.html')],
         },
 
         /* File loader for supporting images, for example, in CSS files.
         */
         {
           test: /\.(jpg|png|gif)$/,
-          loader: 'file'
+          loader: 'file',
         },
         {
           enforce: 'post',
@@ -172,10 +172,10 @@ module.exports = (env) => {
           query: {
             search: 'var sourceMappingUrl = extractSourceMappingUrl\\(cssText\\);',
             replace: 'var sourceMappingUrl = "";',
-            flags: 'g'
-          }
-        }
-      ]
+            flags: 'g',
+          },
+        },
+      ],
     },
 
     /*
@@ -187,7 +187,7 @@ module.exports = (env) => {
       new AssetsPlugin({
         path: appRoot.resolve('dist'),
         filename: 'webpack-assets.json',
-        prettyPrint: true
+        prettyPrint: true,
       }),
 
       /*
@@ -197,6 +197,7 @@ module.exports = (env) => {
        * See: https://github.com/s-panferov/awesome-typescript-loader#forkchecker-boolean-defaultfalse
        */
       new ForkCheckerPlugin(),
+
       /*
        * Plugin: CommonsChunkPlugin
        * Description: Shares common code between the pages.
@@ -206,7 +207,7 @@ module.exports = (env) => {
        * See: https://github.com/webpack/docs/wiki/optimization#multi-page-app
        */
       new webpack.optimize.CommonsChunkPlugin({
-        name: ['polyfills', 'vendor'].reverse()
+        name: ['polyfills', 'vendor'].reverse(),
       }),
 
       /**
@@ -232,17 +233,17 @@ module.exports = (env) => {
        */
       new CopyWebpackPlugin([{
         from: 'src/assets',
-        to: 'assets'
+        to: 'assets',
       }], {
         ignore: [
           'humans.txt',
-          'robots.txt'
-        ]
+          'robots.txt',
+        ],
       }),
       new CopyWebpackPlugin([{
-        from: 'src/assets/robots.txt'
+        from: 'src/assets/robots.txt',
       }, {
-        from: 'src/assets/humans.txt'
+        from: 'src/assets/humans.txt',
       }]),
 
       /*
@@ -254,32 +255,6 @@ module.exports = (env) => {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin(_CONFIG),
-
-      /*
-       * Plugin: HtmlHeadConfigPlugin
-       * Description: Generate html tags based on javascript maps.
-       *
-       * If a publicPath is set in the webpack output configuration, it will be automatically added to
-       * href attributes, you can disable that by adding a "=href": false property.
-       * You can also enable it to other attribute by settings "=attName": true.
-       *
-       * The configuration supplied is map between a location (key) and an element definition object (value)
-       * The location (key) is then exported to the template under then htmlElements property in webpack configuration.
-       *
-       * Example:
-       *  Adding this plugin configuration
-       *  new HtmlElementsPlugin({
-       *    headTags: { ... }
-       *  })
-       *
-       *  Means we can use it in the template like this:
-       *  <%= webpackConfig.htmlElements.headTags %>
-       *
-       * Dependencies: HtmlWebpackPlugin
-       */
-      /*new HtmlElementsPlugin({
-        headTags: require('./head-config.common')
-      }),*/
     ],
 
     /*
@@ -294,7 +269,7 @@ module.exports = (env) => {
       process: true,
       module: false,
       clearImmediate: false,
-      setImmediate: false
-    }
+      setImmediate: false,
+    },
   };
 }
