@@ -18,8 +18,8 @@ export class VisibleTodoListComponent {
   public todoList$: Observable<ITodoItem[]>;
   public activeFilter$: Observable<VisibilityFilter>;
 
-  constructor(private _store: Store<IAppState>) {
-    this.todoList$ = this._store.select<ITodoItem[]>('todos');
-    this.activeFilter$ = this._store.select<VisibilityFilter>('visibilityFilter');
+  constructor(store: Store<IAppState>) {
+    this.todoList$ = store.select<ITodoItem[]>('todos');
+    this.activeFilter$ = store.select<VisibilityFilter>('visibilityFilter');
   }
 }
