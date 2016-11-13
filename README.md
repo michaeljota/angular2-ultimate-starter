@@ -42,9 +42,9 @@
 > If you're looking for a complete Starter with Ngrx and HMR you should go to 
 [QDouble/Angular-Webpack2-Starter](https://github.com/qdouble/angular-webpack2-starter)
 
-> If you're looking to add [Angular Material 2]() we have a branch [material2](https://github.com/AngularClass/angular2-webpack-starter/tree/material2)  
+> If you're looking to add [Angular Material 2](https://github.com/angular/material2) go to the branch [material2](https://github.com/michaeljota/angular2-ultimate-starter/tree/material2)  
 
-> If you're looking to add [Bootstrap 4](), with [ng2-bootstrap]() we have a branch [ng2-bootstrap]()    
+> If you're looking to add [Bootstrap 4](https://v4-alpha.getbootstrap.com/), with [ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap) go to the branch [bootstrap](https://github.com/michaeljota/angular2-ultimate-starter/tree/boostrap)    
 
 ---
 
@@ -68,7 +68,7 @@ This is also using [Protractor](http://www.protractortest.org/) for our end-to-e
 * End-to-end Angular 2 code using Protractor.
 * Type manager with `@types`
 * Material Design with [angular/material2](https://github.com/angular/material2)
-* Bootstrap 4 with [n2-bootstrap]()
+* Bootstrap 4 with [ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap)
 
 ### Quick start
 **Make sure you have Node version >= 6.x.x and NPM >= 3.x.x**  
@@ -392,6 +392,23 @@ npm run e2e:live
 npm run build:docker
 ```
 
+### clean
+```bash
+# clean everything (cache, generated folders and modules).
+npm run clean
+# clean everything and install.
+npm run clean:install
+# clean generated folders and files (dist, converage, doc, and logs).
+npm run clean:folder
+# clean everything, install and start.
+npm run clean:start
+# clean node_modules
+npm run clean:modules
+# clean dist
+npm run clean:dist
+```
+
+
 # Configuration
 Configuration files live in `config/`. This uses webpack, karma, and protractor for different stages of your application.
 This folder also have subfolders for the tslint extensions configurations.
@@ -425,12 +442,12 @@ extensions to work with in this project, or any Angular2 project. It includes:
 > [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 The configuration automatically connects to the webpack development server on port `3000`.
 
-> [Typescript Hero]()
+> [Typescript Hero](https://marketplace.visualstudio.com/items?itemName=rbbit.typescript-hero)
 It is configured to start multiple lines automatically after `100` characters.
 
-> [EditorConfig]()
+> [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-> [TSLint]()
+> [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
 
 All those extensions are a recommendation, and are by no way, necessary to develop with this project.
 
@@ -531,7 +548,7 @@ of the `angular2-webpack-starter` repo are prefixed with `a2ws`.
 
 # Roadmap
 
-> See #1
+> Some example apps
 ___
 
 # License
