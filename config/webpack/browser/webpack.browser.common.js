@@ -136,13 +136,12 @@ module.exports = (env) => {
          */
         {
           test: /\.css$/,
-          loaders: ['to-string-loader', 'css-loader'],
-          // loaders: ['raw-loader']
+          loaders: ['to-string-loader', 'style-loader', 'css-loader'],
         },
 
         {
           test: /\.scss$/,
-          loaders: ['to-string-loader', 'sass-loader'],
+          loaders: ['to-string-loader', 'style-loader', 'css-loader', 'sass-loader?outputStyle=compressed&sourceComments=false&'],
         },
 
         /* Raw loader support for *.html
@@ -162,6 +161,14 @@ module.exports = (env) => {
           test: /\.(jpg|png|gif)$/,
           loader: 'file',
         },
+
+        /* Fonts loader. Inline as base64 string.
+         */
+        {
+          test: /\.(woff|woff2|eot|ttf|svg)$/,
+          loader: 'base64-inline-loader',
+        },
+
         {
           enforce: 'post',
           test: /\.js$/,
