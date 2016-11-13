@@ -13,6 +13,7 @@
 [Tests](https://angular.io/docs/js/latest/api/test/),
 [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-), 
 [Material](https://github.com/angular/material2), 
+[ng2-responsive](https://github.com/ManuCutillas/ng2-responsive),
 [Karma](https://karma-runner.github.io/), 
 [Protractor](https://angular.github.io/protractor/), 
 [Jasmine](https://github.com/jasmine/jasmine), 
