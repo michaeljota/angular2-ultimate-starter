@@ -302,15 +302,17 @@ You can also have this `zsh` done for you [automatically](https://github.com/cre
 > If you have Windows, you should consider [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade)
 to update the npm after the Node installation.
 
-Once you have those, you should install these globals with `npm install --global`:  
+Once you have those, you should install [rimraf](https://github.com/isaacs/rimraf) global with `npm install --global rimraf`.
+If you don't, you can't use any clean script.
+
+This is a list of other modules you can install globally.
 *This not really necessary, but recommended if you are working **alone**, if you are in a team
-it's better if all of the team work with this tools with the same version from the scripts* 
+it's better if all of the team work with this tools with the same version from the scripts.* 
 * `webpack` (`npm install --global webpack`)
 * `webpack-dev-server` (`npm install --global webpack-dev-server`)
 * `karma` (`npm install --global karma-cli`)
 * `protractor` (`npm install --global protractor`)
 * `typescript` (`npm install --global typescript`)
-* `rimraf` (`npm install --global rimraf`) *The only one that I'd suggest to install globally, even if you are in a team*
 
 ## Installing
 * `fork` this repo (or [Download ZIP]()).
