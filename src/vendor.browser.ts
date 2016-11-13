@@ -20,6 +20,9 @@ import '@angular/router';
 import '@ngrx/core'
 import '@ngrx/store';
 
+// Extra Angular2 modules
+import 'ng2-responsive'
+
 // AngularClass
 import '@angularclass/hmr';
 

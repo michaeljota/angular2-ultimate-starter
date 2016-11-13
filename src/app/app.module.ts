@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
+import { ResponsiveModule } from 'ng2-responsive';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 
@@ -32,6 +33,7 @@ import { SERVICES } from './services';
     BrowserModule,
     FormsModule,
     HttpModule,
+    ResponsiveModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
     StoreModule.provideStore(APP_REDUCER, APP_STATE),
   ],
