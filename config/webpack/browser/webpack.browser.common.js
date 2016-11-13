@@ -66,9 +66,6 @@ module.exports = (env) => {
        */
       extensions: ['.ts', '.js', '.css', '.scss', '.json'],
 
-      // An array of directory names to be resolved to the current directory
-      modules: [appRoot.resolve('src'), 'node_modules'],
-
     },
 
     /*
