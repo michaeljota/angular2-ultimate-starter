@@ -41,7 +41,7 @@
     "preversion": "npm test",
     "protractor": "protractor",
     "rimraf": "rimraf",
-    "server:dev": "webpack-dev-server --config webpack.config.js --progress --profile --watch --content-base src/ --open",
+    "server:dev": "webpack-dev-server --config webpack.config.js --progress --profile --watch --content-base src/",
     "server:prod": "http-server dist --cors -o",
     "server": "npm run server:dev",
     "start": "npm run server:dev",
