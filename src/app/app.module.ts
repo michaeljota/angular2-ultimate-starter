@@ -2,6 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
+import { Md2Module }  from 'md2';
 import { NgModule } from '@angular/core';
 import { ResponsiveModule } from 'ng2-responsive';
 import { RouterModule } from '@angular/router';
@@ -33,6 +35,8 @@ import { SERVICES } from './services';
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule.forRoot(),
+    Md2Module.forRoot(),
     ResponsiveModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
     StoreModule.provideStore(APP_REDUCER, APP_STATE),
