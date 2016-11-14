@@ -19,6 +19,12 @@ import '@angular/router';
 import '@ngrx/core'
 import '@ngrx/store';
 
+// Material Design
+import '@angular/material';
+import 'md2';
+import './material.theme.scss';
+import './material.icons.scss';
+
 // Extra Angular2 modules
 import 'ng2-responsive';
 
