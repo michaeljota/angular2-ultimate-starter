@@ -49,6 +49,14 @@
 
 ---
 
+### Material branch 
+Using:
+- [Material2](https://github.com/angular/material2)
+- [MD2](https://github.com/Promact/md2)
+- [Material Design Icons](https://github.com/google/material-design-icons)
+
+---
+
 This seed repo serves as an Angular 2 starter for anyone looking to get up and running with
 Angular 2 and TypeScript fast. To have multiple targets to deploy: [Electron](http://electron.atom.io/),
 [Angular2-Universal](https://github.com/angular/universal) (*soon*) and 
