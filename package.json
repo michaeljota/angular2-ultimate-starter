@@ -157,10 +157,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/angular2-webpack-starter.git"
+    "url": "https://github.com/michaeljota/angular2-ultimate-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/angularclass/angular2-webpack-starter/issues"
+    "url": "https://github.com/michaeljota/angular2-ultimate-starter/issues"
   },
   "engines": {
     "node": ">= 4.2.1",
