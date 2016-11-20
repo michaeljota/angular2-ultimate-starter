@@ -18,6 +18,7 @@
     "build:prod": "webpack --progress --profile --bail",
     "build": "npm run build:dev",
     "ci": "npm run lint && npm test && npm run e2e",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "clean:dist": "rimraf dist",
     "clean:folder": "rimraf doc coverage dist npm-debug.log.*",
     "clean:install": "npm run clean",
