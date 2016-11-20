@@ -136,12 +136,29 @@ module.exports = (env) => {
          */
         {
           test: /\.css$/,
-          loaders: ['to-string-loader', 'style-loader', 'css-loader'],
+          loaders: ['to-string-loader', 'css-loader'],
+          exclude: [/\.(theme|icons)\.css$/],
         },
-
         {
           test: /\.scss$/,
-          loaders: ['to-string-loader', 'style-loader', 'css-loader', 'sass-loader?outputStyle=compressed&sourceComments=false&'],
+          loaders: ['to-string-loader', 'css-loader', 'sass-loader?outputStyle=compressed&sourceComments=false&'],
+          exclude: [/\.(theme|icons)\.scss$/],
+        },
+
+        /*
+         * style and css loader suppport for theme and icons .[s]css files
+         * Inject as style tag in the html template
+         *
+         */
+        {
+          test: /\.css$/,
+          loaders: ['style-loader', 'css-loader'],
+          include: [/\.(theme|icons)\.css$/],
+        },
+        {
+          test: /\.scss$/,
+          loaders: ['style-loader', 'css-loader', 'sass-loader?outputStyle=compressed&sourceComments=false&'],
+          include: [/\.(theme|icons)\.scss$/],
         },
 
         /* Raw loader support for *.html
