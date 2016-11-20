@@ -2,10 +2,10 @@ import { NgForm } from '@angular/forms/src/directives';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-import { IAppState } from '../../app.reducer';
+import { IAppState } from './../../app.reducer';
 
-import { TodoListActions } from '../../actions';
-import { ITodoItem } from '../../models';
+import { TodoListActions } from './../../actions';
+import { ITodoItem } from './../../models';
 
 @Component({
   selector: 'my-add-todo',
