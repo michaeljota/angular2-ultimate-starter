@@ -143,7 +143,6 @@ module.exports = (env) => {
         aggregateTimeout: 300,
         poll: 1000,
       },
-      outputPath: appRoot.resolve('dist'),
     },
 
     /*
