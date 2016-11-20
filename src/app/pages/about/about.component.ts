@@ -10,14 +10,26 @@ console.info('`About` component loaded asynchronously');
 @Component({
   selector: 'my-about',
   template: `
-    <h1>About</h1>
-    <div>
+  <p>
+  <md-card>
+    <md-card-title>
+      About
+    </md-card-title>
+    <md-card-content>
       <h3>
         Made by: <a href="http://github.com/michaeljota/">@michaeljota</a>
       </h3>
         Largely based on the work done by angularclass. patrick@AngularClass.com
-    </div>
-    <pre>this.loadedData = {{ loadedData | json }}</pre>
+    </md-card-content>
+  </md-card>
+  </p>
+  <p>
+  <md-card>
+    <md-card-content>
+      <pre>this.loadedData = {{ loadedData | json }}</pre>
+    </md-card-content>
+  </md-card>
+  </p>
   `,
 })
 export class AboutComponent implements OnInit {

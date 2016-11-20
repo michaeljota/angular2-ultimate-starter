@@ -1,7 +1,7 @@
 /*
  * Angular 2 decorators and services
  */
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 /*
  * App Component
@@ -9,7 +9,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
  */
 @Component({
   selector: 'my-app',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: [
     './app.component.css',
   ],

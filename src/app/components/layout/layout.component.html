@@ -1,0 +1,22 @@
+<md-sidenav-layout>
+  <md-sidenav #nav>
+    <md-toolbar color="primary">
+      <span>My App</span>
+    </md-toolbar>
+    <my-navbar></my-navbar>
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <button
+      md-icon-button
+      (click)="nav.open()"
+    >
+      <md-icon>menu</md-icon>
+    </button>
+    <span>Todo App Example</span>
+  </md-toolbar>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <my-store-state></my-store-state>
+  <my-footer></my-footer>
+</md-sidenav-layout>

@@ -10,22 +10,38 @@ import { ITodoItem } from './../../models';
 @Component({
   selector: 'my-add-todo',
   template: `
-  <form
-    (ngSubmit)="addTodo(todoForm)"
-    autocomplete="off"
-    #todoForm="ngForm"
-  >
-
-    <input
-      type="text"
-      name="todo-text"
-      placeholder="insert todo"
-      [(ngModel)]="todoModel.text"
-      required
-      autofocus
-    />
-    <button type="submit" [disabled]="!todoForm.form.valid">Add Todo</button>
-  </form>
+  <p>
+  <md-card>
+    <md-card-title>Input</md-card-title>
+    <form
+      (ngSubmit)="addTodo(todoForm)"
+      autocomplete="off"
+      #todoForm="ngForm"
+    >
+      <md-card-content>
+        <md-input
+          type="text"
+          name="todo-text"
+          placeholder="insert todo"
+          [(ngModel)]="todoModel.text"
+          required
+          autofocus
+        >
+        </md-input>
+      </md-card-content>
+      <md-card-actions>
+        <button
+          type="submit"
+          md-raised-button
+          color="primary"
+          [disabled]="!todoForm.form.valid"
+        >
+          Add Todo
+        </button>
+      </md-card-actions>
+    </form>
+  </md-card>
+  </p>
   `,
 })
 export class AddTodoComponent {

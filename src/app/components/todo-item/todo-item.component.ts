@@ -8,11 +8,11 @@ import { ITodoItem } from './../../models';
 @Component({
   selector: 'my-todo',
   template: `
-  <li [myCompleted]="todo.completed"
+  <md-list-item [myCompleted]="todo.completed"
     (click)="toogleTodo()"
     >
     {{ todo.text }}
-  </li>
+  </md-list-item>
   `,
 })
 export class TodoItemComponent {

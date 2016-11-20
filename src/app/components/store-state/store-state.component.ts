@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-store-state',
   template: `
-    <pre> appState = {{ store$ | async | json }}  </pre>
+  <p>
+  <md-card>
+    <md-card-content>
+      <pre> appState = {{ store$ | async | json }}  </pre>
+    </md-card-content>
+  </md-card>
+  </p>
   `,
 })
 export class StoreStateComponent {

@@ -11,10 +11,4 @@ describe('App', () => {
     expect(subject).toEqual(result);
   });
 
-  it('should have `todo app example` myXLarge', () => {
-    let subject = element(by.css('[myXLarge]')).getText();
-    let result  = 'Todo App Example';
-    expect(subject).toEqual(result);
-  });
-
 });

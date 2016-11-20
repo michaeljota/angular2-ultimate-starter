@@ -1,1 +1,11 @@
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber';
+@import '~@angular/material/core/theming/prebuilt/indigo-pink';
+
+html, body{
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+span.active {
+  background-color: gray;
+}
