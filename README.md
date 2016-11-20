@@ -13,6 +13,7 @@
 [Tests](https://angular.io/docs/js/latest/api/test/),
 [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-), 
 [Material](https://github.com/angular/material2), 
+[ng2-responsive](https://github.com/ManuCutillas/ng2-responsive),
 [Karma](https://karma-runner.github.io/), 
 [Protractor](https://angular.github.io/protractor/), 
 [Jasmine](https://github.com/jasmine/jasmine), 
@@ -42,9 +43,9 @@
 > If you're looking for a complete Starter with Ngrx and HMR you should go to 
 [QDouble/Angular-Webpack2-Starter](https://github.com/qdouble/angular-webpack2-starter)
 
-> If you're looking to add [Angular Material 2]() we have a branch [material2](https://github.com/AngularClass/angular2-webpack-starter/tree/material2)  
+> If you're looking to add [Angular Material 2](https://github.com/angular/material2) go to the branch [material2](https://github.com/michaeljota/angular2-ultimate-starter/tree/material2)  
 
-> If you're looking to add [Bootstrap 4](), with [ng2-bootstrap]() we have a branch [ng2-bootstrap]()    
+> If you're looking to add [Bootstrap 4](https://v4-alpha.getbootstrap.com/), with [ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap) go to the branch [bootstrap](https://github.com/michaeljota/angular2-ultimate-starter/tree/boostrap)    
 
 ---
 
@@ -68,7 +69,7 @@ This is also using [Protractor](http://www.protractortest.org/) for our end-to-e
 * End-to-end Angular 2 code using Protractor.
 * Type manager with `@types`
 * Material Design with [angular/material2](https://github.com/angular/material2)
-* Bootstrap 4 with [n2-bootstrap]()
+* Bootstrap 4 with [ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap)
 
 ### Quick start
 **Make sure you have Node version >= 6.x.x and NPM >= 3.x.x**  
@@ -302,15 +303,17 @@ You can also have this `zsh` done for you [automatically](https://github.com/cre
 > If you have Windows, you should consider [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade)
 to update the npm after the Node installation.
 
-Once you have those, you should install these globals with `npm install --global`:  
+Once you have those, you should install [rimraf](https://github.com/isaacs/rimraf) global with `npm install --global rimraf`.
+If you don't, you can't use any clean script.
+
+This is a list of other modules you can install globally.
 *This not really necessary, but recommended if you are working **alone**, if you are in a team
-it's better if all of the team work with this tools with the same version from the scripts* 
+it's better if all of the team work with this tools with the same version from the scripts.* 
 * `webpack` (`npm install --global webpack`)
 * `webpack-dev-server` (`npm install --global webpack-dev-server`)
 * `karma` (`npm install --global karma-cli`)
 * `protractor` (`npm install --global protractor`)
 * `typescript` (`npm install --global typescript`)
-* `rimraf` (`npm install --global rimraf`) *The only one that I'd suggest to install globally, even if you are in a team*
 
 ## Installing
 * `fork` this repo (or [Download ZIP]()).
@@ -392,6 +395,23 @@ npm run e2e:live
 npm run build:docker
 ```
 
+### clean
+```bash
+# clean everything (cache, generated folders and modules).
+npm run clean
+# clean everything and install.
+npm run clean:install
+# clean generated folders and files (dist, converage, doc, and logs).
+npm run clean:folder
+# clean everything, install and start.
+npm run clean:start
+# clean node_modules
+npm run clean:modules
+# clean dist
+npm run clean:dist
+```
+
+
 # Configuration
 Configuration files live in `config/`. This uses webpack, karma, and protractor for different stages of your application.
 This folder also have subfolders for the tslint extensions configurations.
@@ -425,12 +445,12 @@ extensions to work with in this project, or any Angular2 project. It includes:
 > [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 The configuration automatically connects to the webpack development server on port `3000`.
 
-> [Typescript Hero]()
+> [Typescript Hero](https://marketplace.visualstudio.com/items?itemName=rbbit.typescript-hero)
 It is configured to start multiple lines automatically after `100` characters.
 
-> [EditorConfig]()
+> [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-> [TSLint]()
+> [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
 
 All those extensions are a recommendation, and are by no way, necessary to develop with this project.
 
@@ -531,7 +551,7 @@ of the `angular2-webpack-starter` repo are prefixed with `a2ws`.
 
 # Roadmap
 
-> See #1
+> Some example apps
 ___
 
 # License

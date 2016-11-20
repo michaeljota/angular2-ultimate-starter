@@ -92,7 +92,7 @@ module.exports = (env) => {
           'ENV': JSON.stringify(_env.ENV),
           'NODE_ENV': JSON.stringify(_env.ENV),
           'HMR': _env.HMR,
-        }
+        },
       }),
 
       /**
@@ -120,10 +120,10 @@ module.exports = (env) => {
           tslint: {
             emitErrors: false,
             failOnHint: false,
-            resourcePath: 'src'
+            resourcePath: 'src',
           },
-        }
-      })
+        },
+      }),
 
     ],
 
@@ -141,9 +141,8 @@ module.exports = (env) => {
       historyApiFallback: true,
       watchOptions: {
         aggregateTimeout: 300,
-        poll: 1000
+        poll: 1000,
       },
-      outputPath: appRoot.resolve('dist')
     },
 
     /*
@@ -158,8 +157,8 @@ module.exports = (env) => {
       process: true,
       module: false,
       clearImmediate: false,
-      setImmediate: false
-    }
+      setImmediate: false,
+    },
 
   });
 }

@@ -26,7 +26,7 @@ module.exports = (env) => {
      * This also means all resource URIs (CSS/Images/JS) will have this prefix added by the browser
      * unless they are absolute (start with '/'). We will handle it via `output.publicPath`
      */
-    baseUrl: '/' + GH_REPO_NAME + '/' + GitHubDeploy.safeUrl(HTML_OPTIONS.baseUrl)
+    baseUrl: '/' + GH_REPO_NAME + '/' + GitHubDeploy.safeUrl(HTML_OPTIONS.baseUrl),
   }, env);
 
   return webpackMerge(webpackConfig(_env), {
@@ -44,36 +44,36 @@ module.exports = (env) => {
        * Prefixing so every resource will be absolute (otherwise it will be url.com/repoName/repoName...
        * Suffixing since chunks will not do it automatically (testes against about page)
        */
-      publicPath: '/' + GH_REPO_NAME + '/' + GitHubDeploy.safeUrl(webpackConfig.output.publicPath)
+      publicPath: '/' + GH_REPO_NAME + '/' + GitHubDeploy.safeUrl(webpackConfig.output.publicPath),
     },
 
     plugins: [
       new HtmlWebpackPlugin(_env),
       function () {
         this.plugin('done', function (stats) {
-          console.log('Starting deployment to GitHub.');
+          console.info('Starting deployment to GitHub.');
 
           const logger = function (msg) {
-            console.log(msg);
+            console.info(msg);
           };
 
           const options = {
             logger: logger,
             remote: GIT_REMOTE_NAME,
-            message: COMMIT_MESSAGE
+            message: COMMIT_MESSAGE,
           };
 
           ghpages.publish(webpackConfig.output.path, options, function (err) {
             if (err) {
-              console.log('GitHub deployment done. STATUS: ERROR.');
+              console.error('GitHub deployment done. STATUS: ERROR.');
               throw err;
             } else {
-              console.log('GitHub deployment done. STATUS: SUCCESS.');
+              console.info('GitHub deployment done. STATUS: SUCCESS.');
             }
           });
         });
-      }
-    ]
+      },
+    ],
   });
 
 }
