@@ -15,7 +15,7 @@
   "scripts": {
     "build:dev": "webpack --progress --profile",
     "build:docker": "npm run build:prod && docker build -t angular2-webpack-start:latest .",
-    "build:prod": "webpack --progress --profile --bail",
+    "build:prod": "webpack --progress --profile --bail --env.prod",
     "build": "npm run build:dev",
     "ci": "npm run lint && npm test && npm run e2e",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
