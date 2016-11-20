@@ -35,7 +35,7 @@ export class AddTodoComponent {
   };
 
   constructor(
-    private _store: Store<IAppState>
+    private _store: Store<IAppState>,
   ) { }
 
   public addTodo(todoForm: NgForm) {
