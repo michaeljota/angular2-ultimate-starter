@@ -1,6 +1,6 @@
 {
   "name": "angular2-ultimate-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Angular 2 Starter with all the Angular 2 awesomeness and other good stuff like: Tests, E2E, Coverage, Karma, Protractor, Jasmine, Istanbul, Sass, Electron, Universal, everything writing in TypeScript and Webpacked",
   "keywords": [
     "angular2",
