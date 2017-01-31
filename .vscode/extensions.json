@@ -4,11 +4,9 @@
   "recommendations": [
     // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
 
-    "abusaidm.html-snippets",
     "christian-kohler.path-intellisense",
     "EditorConfig.EditorConfig",
     "eg2.tslint",
-    "formulahendry.auto-close-tag",
     "formulahendry.auto-rename-tag",
     "joelday.docthis",
     "johnpapa.Angular2",
